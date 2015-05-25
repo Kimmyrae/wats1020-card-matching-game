@@ -19,7 +19,7 @@
             }
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/solution.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
@@ -44,13 +44,27 @@
             <li><a href="#">Credits</a></li>
           </ul>
           <form class="navbar-form navbar-right">
-            <button class="btn btn-sm btn-success">Restart</button>
+            <button class="btn btn-sm btn-success btn-start">Restart</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
 
     <div class="container">
+      <div class="info-display row hidden">
+        <div class="col-xs-4">
+          <span class="score-label">Matches: </span>
+          <span class="matches-display">0</span>
+        </div>
+        <div class="col-xs-4">
+          <span class="score-label">Guesses: </span>
+          <span class="guesses-display">0</span>
+        </div>
+        <div class="col-xs-4">
+          <span class="score-label">Score: </span>
+          <span class="score-display">0</span>
+        </div>
+      </div>
       <div class="game-container">
         <h1>Let's Play!</h1>
         <p>Click below to start your game. Here's how you play:</p>
@@ -59,19 +73,40 @@
           <li>If they match, you earn points! If not, you lose points!</li>
           <li>Try to win lots of points!</li>
         </ol>
-        <p><button class="btn btn-lg btn-success btn-start-game">Start the Game</button></p>
+        <p><button class="btn btn-lg btn-success btn-start">Start the Game</button></p>
       </div>
       <hr>
 
       <footer>
         <p>&copy; Jane Student 2015</p>
       </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+    </div> <!-- /container -->
+    <div id="end-game-modal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Game Over</h4>
+          </div>
+          <div class="modal-body">
+            <p>Congratulations! You finished the game.</p>
+            <p class="final-matches-wrapper"><span class="final-matches-label">Matches</span> <span class="final-matches">000</span></p>
+            <p class="final-guesses-wrapper"><span class="final-guesses-label">Guesses</span> <span class="final-guesses">000</span></p>
+            <p class="final-score-wrapper"><span class="final-score-label">Score</span> <span class="final-score">000</span></p>
+            <p class="final-rating-wrapper"><span class="final-rating-label">Rating</span> <span class="final-rating">000</span></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success play-again" data-dismiss="modal">Play Again</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
 
-        <script src="js/main.js"></script>
+        <script src="js/solution.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
