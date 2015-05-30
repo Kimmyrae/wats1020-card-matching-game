@@ -73,7 +73,7 @@ var evaluateGuess = function(target){
 
         if(gameState.currentGuess[0].slug == gameState.currentGuess[1].slug) {
             // If the two cards guessed match, then award points and remove the cards
-            console.log("guesses matched!");
+            console.log("You Matched!!");
             gameState.matchesMade += 1;
             gameState.cardsMatched.push(gameState.currentGuess[0]);
             recalculateScore();
@@ -81,7 +81,7 @@ var evaluateGuess = function(target){
             deactivateMatchedCards(gameState.currentGuess[0]);
             gameState.currentGuess = [];
         } else {
-            console.log('guesses did not match');
+            console.log('No Match);
             recalculateScore();
             updateInfoDisplay();
             setTimeout(resetGuess, 1000);
