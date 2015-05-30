@@ -63,7 +63,7 @@ var evaluateGuess = function(target){
         slug: cardTarget.data('slug'),
         name: cardTarget.data('name'),
         file: cardTarget.data('file')
-    };
+    }
     gameState.currentGuess.push(guessCard);
 
     if (gameState.currentGuess.length == 2){
@@ -73,7 +73,7 @@ var evaluateGuess = function(target){
 
         if(gameState.currentGuess[0].slug == gameState.currentGuess[1].slug) {
             // If the two cards guessed match, then award points and remove the cards
-            console.log("You Matched!!");
+            console.log("guesses matched!");
             gameState.matchesMade += 1;
             gameState.cardsMatched.push(gameState.currentGuess[0]);
             recalculateScore();
@@ -81,7 +81,7 @@ var evaluateGuess = function(target){
             deactivateMatchedCards(gameState.currentGuess[0]);
             gameState.currentGuess = [];
         } else {
-            console.log('No Match);
+            console.log('guesses did not match');
             recalculateScore();
             updateInfoDisplay();
             setTimeout(resetGuess, 1000);
@@ -130,7 +130,7 @@ var resetGuess = function(){
     $('li[data-slug="'+ gameState.currentGuess[0].slug +'"] .back').fadeIn();
     $('li[data-slug="'+ gameState.currentGuess[1].slug +'"] .back').fadeIn();
     gameState.currentGuess = [];
-};
+}
 
 var endGame = function(){
     var rating = "unknown";
