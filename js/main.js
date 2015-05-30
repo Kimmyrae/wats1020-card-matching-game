@@ -63,7 +63,7 @@ var evaluateGuess = function(target){
         slug: cardTarget.data('slug'),
         name: cardTarget.data('name'),
         file: cardTarget.data('file')
-    }
+    };
     gameState.currentGuess.push(guessCard);
 
     if (gameState.currentGuess.length == 2){
@@ -107,7 +107,7 @@ var addCardListener = function(newCardItem){
 
 var deactivateMatchedCards = function(card){
     // Remove card instances from active play after a match is made
-    var matchedCards = $('li[data-slug="' + card.slug + '"].card')
+    var matchedCards = $('li[data-slug="' + card.slug + '"].card');
     matchedCards.off('click');
     matchedCards.removeClass('card').addClass('matchedCard');
     gameState.cardsLeft = gameState.cardsLeft - (gameState.cardsMatched.length * 2);
@@ -130,7 +130,7 @@ var resetGuess = function(){
     $('li[data-slug="'+ gameState.currentGuess[0].slug +'"] .back').fadeIn();
     $('li[data-slug="'+ gameState.currentGuess[1].slug +'"] .back').fadeIn();
     gameState.currentGuess = [];
-}
+};
 
 var endGame = function(){
     var rating = "unknown";
