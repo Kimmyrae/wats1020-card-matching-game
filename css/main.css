@@ -29,8 +29,8 @@
 .card, .matchedCard {
     display: inline-block;
 /*    float: left; */
-    width: 90px;
-    height: 148px;
+    width: 200px;
+    height: 300px;
     margin: 1rem;
 }
 .hidden {
