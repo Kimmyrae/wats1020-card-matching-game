@@ -29,11 +29,11 @@
 .card, .matchedCard {
     display: inline-block;
 /*    float: left; */
-    width:  3.0em;
-  	height: 4.50em;
+    width:  12em;
+  	height: 14.5em;
 	border-width: 1px;
   	border-style: solid;
-    margin: 1rem;
+  	margin: .5rem; 
 }
 .hidden {
     display: none;
