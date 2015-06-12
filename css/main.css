@@ -2,11 +2,24 @@
    Author's custom styles
    ========================================================================== */
 
+p {
+	color: yellow;
+	font-size: 30px;
+}
 
+li{
+	color: yellow;
+	font-size: 20px;
+}
+h1 {
+	color: yellow;
+	font-size: 40px;
+}
 .game-container {
-    background: url('../img/retro_intro.png') repeat;
+    background: url('../img/brickwall.jpg');
     padding: 1rem;
     overflow: hidden;
+	
 }
 .info-display {
     margin-top: 1rem;
